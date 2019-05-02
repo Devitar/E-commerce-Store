@@ -1,6 +1,9 @@
 import React from 'react';
 import './scss/App.css';
 
+//components
+import ProductList from './ProductList';
+
 const Navbar = () => {
     return(
         <div className="navBar">
@@ -15,8 +18,11 @@ class App extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="mainAppDiv">
                 <Navbar />
+                <div className="container">
+                    <ProductList />
+                </div>
             </div>
         )
     }
