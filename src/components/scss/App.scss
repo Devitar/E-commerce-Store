@@ -1,0 +1,44 @@
+/* 
+Color Palette: https://coolors.co/b07156-721817-f9f9f9-acbdba-46494c
+
+*/
+$paletteRed: #912F40;//#721817
+$paletteSecondary: #B07156;
+$paletteGrey: #ACBDBA;
+$paletteWhite: #F9F9F9;
+$paletteDarkGrey: #46494C;
+
+$textWhite: #F2F2F2;
+$textBlack: #080705;
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: $paletteWhite;
+}
+
+.navBar{
+    position: absolute;
+    display: flex;
+    width: 18vw;
+    min-width: 240px;
+    height: 100vh;
+    background-color: $paletteSecondary;
+
+    box-shadow: 2.5px 0 10px rgba(0,0,0,0.5);
+}
+
+.navBarHeader{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    //background-color: $paletteBlue;
+    border-bottom: 2px inset rgba(0,0,0,0.5);
+    color: $textWhite;
+    font-size: 2rem;
+    //text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 2px 1px 0px, rgb(0, 0, 0) 1px 2px 0px, rgb(0, 0, 0) 0px 2px 0px, rgb(0, 0, 0) 0px 2px 0px, rgb(0, 0, 0) -1px 2px 0px, rgb(0, 0, 0) -2px 2px 0px, rgb(0, 0, 0) -2px 1px 0px, rgb(0, 0, 0) -2px 0px 0px, rgb(0, 0, 0) -2px 0px 0px, rgb(0, 0, 0) -2px -1px 0px, rgb(0, 0, 0) -1px -2px 0px, rgb(0, 0, 0) -1px -2px 0px, rgb(0, 0, 0) 0px -3px 0px, rgb(0, 0, 0) 0px -2px 0px, rgb(0, 0, 0) 1px -2px 0px, rgb(0, 0, 0) 2px -1px 0px, rgb(0, 0, 0) 2px 0px 0px;
+}

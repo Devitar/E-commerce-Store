@@ -1,0 +1,39 @@
+/* 
+Color Palette: https://coolors.co/b07156-721817-f9f9f9-acbdba-46494c
+
+*/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F9F9F9;
+}
+
+.navBar {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 18vw;
+  min-width: 240px;
+  height: 100vh;
+  background-color: #B07156;
+  -webkit-box-shadow: 2.5px 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 2.5px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navBarHeader {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px inset rgba(0, 0, 0, 0.5);
+  color: #F2F2F2;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=App.css.map */
