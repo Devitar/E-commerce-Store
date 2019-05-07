@@ -1,6 +1,7 @@
 import React from 'react';
 import store from './store';
 
+import './scss/ProductList.css';
 //components
 import Product from './Product';
 
@@ -15,14 +16,14 @@ class ProductList extends React.Component{
     }
 
     render(){
-        let test = store.getState().allProducts.map((product, key) => 
+        let allProducts = store.getState().allProducts.map((product, key) => 
         (
             <Product productObj={product} key={key}/>
         ))
         return(
-            <div>
+            <div className="allProducts">
                 {
-                    test
+                    allProducts
                 }
             </div>
         )
