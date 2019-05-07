@@ -4,6 +4,7 @@ const defaultState = {
     allProducts: [],
     userName: "",
     selectedProduct: null,
+    cart: [],
 }
 
 function allProducts(state = defaultState.allProducts, action){
@@ -33,7 +34,20 @@ function selectedProduct(state = defaultState.selectedProduct, action){
     }
 }
 
-const rootReducer = combineReducers({allProducts, userName, selectedProduct});
+function cart(state = defaultState.cart, action){
+    const newState = action.data;
+    if (action.type === "ADD_TO_CART"){
+        
+        return newState;
+    }else if (action.type === "REMOVE_FROM_CART"){
+
+        return newState;
+    }else{
+        return state;
+    }
+}
+
+const rootReducer = combineReducers({allProducts, userName, selectedProduct, cart});
 
 const store = createStore(rootReducer, defaultState);
 

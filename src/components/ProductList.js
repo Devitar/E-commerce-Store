@@ -2,7 +2,9 @@ import React from 'react';
 import store from './store';
 
 import './scss/ProductList.css';
+
 //components
+import { Grid } from 'semantic-ui-react';
 import Product from './Product';
 
 class ProductList extends React.Component{
@@ -15,17 +17,25 @@ class ProductList extends React.Component{
         store.subscribe(() => this.forceUpdate());
     }
 
+    onProductClick(){
+        console.log('clicked');
+    }
+
     render(){
-        let allProducts = store.getState().allProducts.map((product, key) => 
-        (
-            <Product productObj={product} key={key}/>
-        ))
+        let allProducts = store.getState().allProducts.map((product, key) => {
+            return(
+                <Grid.Column mobile={16} tablet={5} computer={3} key={key}>
+                    <Product productObj={product} onClick={() => {console.log('clicked', product.id)}}/>
+                </Grid.Column>
+            )
+        });
+
         return(
-            <div className="allProducts">
+            <Grid container>
                 {
                     allProducts
                 }
-            </div>
+            </Grid>
         )
     }
 }

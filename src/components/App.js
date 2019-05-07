@@ -3,7 +3,7 @@ import './scss/App.css';
 
 //components
 import ProductList from './ProductList';
-//import { Button } from 'semantic-ui-react';
+//import { Grid } from 'semantic-ui-react';
 
 const Navbar = () => {
     return(
@@ -21,9 +21,7 @@ class App extends React.Component{
         return(
             <div className="mainAppDiv">
                 {/* <Navbar /> */}
-                <div className="container">
-                    <ProductList />
-                </div>
+                <ProductList />
                 
             </div>
         )

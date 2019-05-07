@@ -36,4 +36,11 @@ body {
   color: #F2F2F2;
   font-size: 2rem;
 }
+
+.mainAppDiv {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=App.css.map */

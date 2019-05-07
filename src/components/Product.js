@@ -1,6 +1,9 @@
 import React from 'react';
 import './scss/Product.css';
 
+//components
+import { Image } from 'semantic-ui-react';
+
 /* example data from api
     "id": 4,
     "title": "Apple - AirPods with Charging Case",
@@ -12,10 +15,11 @@ import './scss/Product.css';
 */
 
 const Product = (props) => {
-
     return(
-        <div className="productMain">
-            <img className="productImage" src={props.productObj.img} alt="Product Image" />
+        <div className="productMain" onClick={props.onClick}>
+            <div className="imageContainerProduct">
+                <Image className="productImage" src={props.productObj.img} rounded centered size='tiny'/>
+            </div>
             <h1 className="productTitle">{props.productObj.title}</h1>
             <p className="productText">{props.productObj.price}</p>
         </div>
