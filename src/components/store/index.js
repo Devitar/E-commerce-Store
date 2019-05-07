@@ -3,7 +3,7 @@ import { createStore, combineReducers } from 'redux';
 const defaultState = {
     allProducts: [],
     userName: "",
-    selectedProduct: null,
+    // selectedProduct = null,
     cart: [],
 }
 
@@ -25,15 +25,15 @@ function userName(state = defaultState.userName, action){
     }
 }
 
-function selectedProduct(state = defaultState.selectedProduct, action){
-    if (action.type === "SELECT_PRODUCT"){
-        const newState = action.data;
-        console.log("New item selected", newState);
-        return newState;
-    }else{
-        return state;
-    }
-}
+// function selectedProduct(state = defaultState.selectedProduct, action){
+//     if (action.type === "SELECT_PRODUCT"){
+//         const newState = action.data;
+//         console.log("New item selected", newState);
+//         return newState;
+//     }else{
+//         return state;
+//     }
+// }
 
 function cart(state = defaultState.cart, action){
     const newState = action.data;
@@ -48,7 +48,7 @@ function cart(state = defaultState.cart, action){
     }
 }
 
-const rootReducer = combineReducers({allProducts, userName, selectedProduct, cart});
+const rootReducer = combineReducers({allProducts, userName, cart});
 
 const store = createStore(rootReducer, defaultState);
 

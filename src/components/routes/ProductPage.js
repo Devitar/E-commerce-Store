@@ -15,7 +15,6 @@ class ProductPage extends React.Component{
                 product = v;
             }
         })
-        console.log(product, currentProductId, allProducts);
         return(
             <div className="productPage">
                 <Link to="/">
