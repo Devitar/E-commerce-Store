@@ -28,6 +28,7 @@ function userName(state = defaultState.userName, action){
 function selectedProduct(state = defaultState.selectedProduct, action){
     if (action.type === "SELECT_PRODUCT"){
         const newState = action.data;
+        console.log("New item selected", newState);
         return newState;
     }else{
         return state;

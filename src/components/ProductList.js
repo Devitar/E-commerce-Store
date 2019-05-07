@@ -4,6 +4,7 @@ import store from './store';
 import './scss/ProductList.css';
 
 //components
+import { Link } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import Product from './Product';
 
@@ -25,7 +26,13 @@ class ProductList extends React.Component{
         let allProducts = store.getState().allProducts.map((product, key) => {
             return(
                 <Grid.Column mobile={16} tablet={5} computer={3} key={key}>
-                    <Product productObj={product} onClick={() => {console.log('clicked', product.id)}}/>
+                    <Link to={`/product/${product.id}`}>
+                        <Product 
+                        productObj={product} 
+                        onClick={() => {store.dispatch({type: "SELECT_PRODUCT", data: product.id})}
+                
+                        }></Product>
+                    </Link>
                 </Grid.Column>
             )
         });

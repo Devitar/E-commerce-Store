@@ -3,7 +3,8 @@ import './scss/App.css';
 
 //components
 import ProductList from './ProductList';
-//import { Grid } from 'semantic-ui-react';
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import ProductPage from './routes/ProductPage';
 
 const Navbar = () => {
     return(
@@ -21,8 +22,12 @@ class App extends React.Component{
         return(
             <div className="mainAppDiv">
                 {/* <Navbar /> */}
-                <ProductList />
-                
+                {/* <ProductList /> */}
+                <Switch>
+                    <Route path="/" exact component={ProductList} />
+                    <Route path="/product/:productId" component={ProductPage} />
+                    <Redirect to="/" />
+                </Switch>
             </div>
         )
     }
