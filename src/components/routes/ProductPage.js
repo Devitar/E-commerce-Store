@@ -7,8 +7,15 @@ import {Link} from 'react-router-dom';
 class ProductPage extends React.Component{
 
     render(){
-        const product = store.getState().allProducts[Number(this.props.match.params.productId) - 1];
-        console.log(product);
+        const currentProductId = Number(this.props.match.params.productId);
+        const allProducts = store.getState().allProducts;
+        let product;
+        allProducts.forEach((v,i) => {
+            if (v.id === currentProductId){
+                product = v;
+            }
+        })
+        console.log(product, currentProductId, allProducts);
         return(
             <div className="productPage">
                 <Link to="/">
