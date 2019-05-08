@@ -9,17 +9,17 @@ import { Grid } from 'semantic-ui-react';
 import Product from './Product';
 
 class ProductList extends React.Component{
-    componentWillMount(){
+    // constructor(props) {
+    //     super(props);
+    //     this._isMounted = false;
+    // }
+    componentDidMount(){
         fetch('https://my-json-server.typicode.com/tdmichaelis/typicode/products')
         .then(response => response.json())
         .then(data => 
             store.dispatch({type: "ADD_ALL_PRODUCTS", data: data})
         )
         store.subscribe(() => this.forceUpdate());
-    }
-
-    onProductClick(){
-        console.log('clicked');
     }
 
     render(){
@@ -38,7 +38,7 @@ class ProductList extends React.Component{
         });
 
         return(
-            <Grid container>
+            <Grid container className="productList">
                 {
                     allProducts
                 }

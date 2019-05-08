@@ -3,17 +3,20 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-height: 33vh;
+    height: 33vh;
 }
 .imageContainerProduct{
     width: 100%;
-    height: 65%;
+    min-height: 65%;
     max-height: 65%;
+    overflow: hidden;
 }
 .productImage{
-    width: 100%;
-    height: auto;
-    flex: 1;
+    // width: 100%;
+    // height: 100%;
+    // max-width: 100%;
+    max-height: 100%;
+    // object-fit: scale-down;
 }
 .productTitle{
     width: 100%;
