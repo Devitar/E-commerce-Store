@@ -9,10 +9,6 @@ import { Grid } from 'semantic-ui-react';
 import Product from './Product';
 
 class ProductList extends React.Component{
-    // constructor(props) {
-    //     super(props);
-    //     this._isMounted = false;
-    // }
     componentDidMount(){
         fetch('https://my-json-server.typicode.com/tdmichaelis/typicode/products')
         .then(response => response.json())

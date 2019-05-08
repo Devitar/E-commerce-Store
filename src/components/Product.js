@@ -20,8 +20,10 @@ const Product = (props) => {
             <div className="imageContainerProduct">
                 <Image className="productImage" src={props.productObj.img} rounded centered size='tiny'/>
             </div>
-            <h1 className="productTitle">{props.productObj.title}</h1>
-            <p className="productText">{props.productObj.price}</p>
+            <div className="productContent">
+                <h1 className="productTitle">{props.productObj.title}</h1>
+                <p className="productText">{props.productObj.price}</p>
+            </div>
         </div>
     )
 }

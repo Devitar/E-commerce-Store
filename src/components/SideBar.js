@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Button, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import "./scss/SideBar.css";
 
 //components
 import ProductList from './ProductList';
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, Link } from "react-router-dom";
 import ProductPage from './routes/ProductPage';
 import DropDownMenu from './DropDownMenu';
 
@@ -18,16 +19,17 @@ class SideBar extends Component {
     const { visible } = this.state;
 
     return (
-      <div>
+      <div className="sideBarMain">
+        <div className="topBarMain">
         <Button.Group>
-          <Button disabled={visible} onClick={this.handleShowClick}>
-            Show sidebar
-          </Button>
-          <Button disabled={!visible} onClick={this.handleHideClick}>
-            Hide sidebar
-          </Button>
+            <Button disabled={visible} onClick={this.handleShowClick}>
+                <Icon name="bars" />
+            </Button>
         </Button.Group>
-
+        <div className="companyTop">
+            Via Maris Co.
+        </div>
+        </div>
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}
@@ -39,10 +41,12 @@ class SideBar extends Component {
             visible={visible}
             width='thin'
           >
-            <Menu.Item as='a'>
-              <Icon name='home' />
-              Home
-            </Menu.Item>
+              <Link to="/" >
+                <Menu.Item as='a'>
+                  <Icon name='home' />
+                  Home
+                </Menu.Item>
+              </Link>
             <Menu.Item>
                 <DropDownMenu />
             </Menu.Item>
