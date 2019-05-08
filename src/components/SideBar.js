@@ -41,6 +41,7 @@ class SideBar extends Component {
             vertical
             visible={visible}
             width='thin'
+            className="sideBarObj"
           >
               <Link to="/" >
                 <Menu.Item>

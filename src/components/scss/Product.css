@@ -12,6 +12,8 @@
   max-width: 75vw;
   border: 1px solid rgba(40, 40, 40, 0.5);
   border-radius: 15px;
+  -webkit-box-shadow: 7px 7px 8px -6px rgba(0, 0, 0, 0.58);
+  box-shadow: 7px 7px 8px -6px rgba(0, 0, 0, 0.58);
 }
 
 .imageContainerProduct {
