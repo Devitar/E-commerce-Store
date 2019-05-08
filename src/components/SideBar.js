@@ -6,6 +6,7 @@ import "./scss/SideBar.css";
 import ProductList from './ProductList';
 import { Route, Switch, Redirect, Link } from "react-router-dom";
 import ProductPage from './routes/ProductPage';
+import ErrorPage from './routes/ErrorPage';
 import DropDownMenu from './DropDownMenu';
 
 class SideBar extends Component {
@@ -21,14 +22,14 @@ class SideBar extends Component {
     return (
       <div className="sideBarMain">
         <div className="topBarMain">
-        <Button.Group>
-            <Button disabled={visible} onClick={this.handleShowClick}>
-                <Icon name="bars" />
-            </Button>
-        </Button.Group>
-        <div className="companyTop">
-            Via Maris Co.
-        </div>
+          <Button.Group>
+              <Button disabled={visible} onClick={this.handleShowClick}>
+                  <Icon name="bars" />
+              </Button>
+          </Button.Group>
+          <div className="companyTop">
+              Temporary Company Name
+          </div>
         </div>
         <Sidebar.Pushable as={Segment}>
           <Sidebar
@@ -42,7 +43,7 @@ class SideBar extends Component {
             width='thin'
           >
               <Link to="/" >
-                <Menu.Item as='a'>
+                <Menu.Item>
                   <Icon name='home' />
                   Home
                 </Menu.Item>
@@ -57,6 +58,7 @@ class SideBar extends Component {
                 <Switch>
                     <Route path="/" exact component={ProductList} />
                     <Route path="/product/:productId" component={ProductPage} />
+                    <Route path="/404" component={ErrorPage} />
                     <Redirect to="/" />
                 </Switch>
             </Segment>

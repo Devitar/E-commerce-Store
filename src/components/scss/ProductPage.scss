@@ -6,11 +6,21 @@
 }
 
 .mainContentProductPage{
+    width: 75%;
+    height: 100vh;
+}
 
-}
 .productPageImageContainer{
-    
+    max-width: 65%;
+    max-height: 65%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
+.productPageImage{
+    height: 45%;
+}
+
 .productTitle{
 
 }

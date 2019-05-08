@@ -4,4 +4,25 @@
   min-height: 100vh;
   min-width: 100vw;
 }
+
+.mainContentProductPage {
+  width: 75%;
+  height: 100vh;
+}
+
+.productPageImageContainer {
+  max-width: 65%;
+  max-height: 65%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.productPageImage {
+  height: 45%;
+}
 /*# sourceMappingURL=ProductPage.css.map */
