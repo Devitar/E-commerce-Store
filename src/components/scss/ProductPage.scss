@@ -8,19 +8,19 @@
 .mainContentProductPage{
     width: 75%;
     height: 100vh;
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
 }
 
-.productPageImageContainer{
-    max-width: 65%;
-    max-height: 65%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+.productPageDivider{
+    width: 75%;
 }
 .productPageImage{
     height: 45%;
 }
 
-.productTitle{
-
+.productPageTitle{
+    font-size: 2rem;
+    text-align: center;
 }

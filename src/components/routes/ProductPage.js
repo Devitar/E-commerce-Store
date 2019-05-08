@@ -3,7 +3,7 @@ import "../scss/ProductPage.css";
 
 //components
 import store from '../store';
-import { Container, Image } from 'semantic-ui-react';
+import { Container, Image, Divider } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 
 /* example data from api
@@ -31,12 +31,11 @@ class ProductPage extends React.Component{
         return(
             <div className="productPage">
                 <Container className="mainContentProductPage">
-                    <p className="productTitle">
+                    <p className="productPageTitle">
                         {product.title}
                     </p>
-                    {/* <div className="productPageImageContainer"> */}
-                        <Image src={product.img} className="productPageImage"/>
-                    {/* </div> */}
+                    <Divider horizontal className="productPageDivider"></Divider>
+                    <Image src={product.img} className="productPageImage"/>
                 </Container>
             </div>
         )
