@@ -24,14 +24,18 @@ const Product = (props) => {
                 </div>
                 <div className="productContent">
                     <h1 className="productTitle">{props.productObj.title}</h1>
-                        <p className="productText">${props.productObj.price}</p>
-                    <div className="productRatingBox">
-                            <Rating rating={props.rating} />
-                            {props.rating}
+                    <div className="productFooter">
+                        <div className="productRatingBox">
+                                <Rating rating={props.rating} />
+                                {props.rating}
                         </div>
+                    </div>
                 </div>
             </div>
-            <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
+            <div className="iconPrice">
+                <p className="productText">${props.productObj.price}</p>
+                <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
+            </div>
         </div>
     )
 }
