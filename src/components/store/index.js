@@ -36,13 +36,13 @@ function userName(state = defaultState.userName, action){
 // }
 
 function cart(state = defaultState.cart, action){
-    const newState = action.data;
     if (action.type === "ADD_TO_CART"){
-        
+        const newState = [...defaultState.cart, action.data];
         return newState;
     }else if (action.type === "REMOVE_FROM_CART"){
 
-        return newState;
+        //return newState;
+        return state;
     }else{
         return state;
     }

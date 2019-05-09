@@ -3,8 +3,9 @@ import "../scss/ProductPage.css";
 
 //components
 import store from '../store';
-import { Container, Image, Divider } from 'semantic-ui-react';
+import { Container, Image, Divider, Button, Icon } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
+import Rating from '../Rating';
 
 /* example data from api
     "id": 4,
@@ -34,8 +35,20 @@ class ProductPage extends React.Component{
                     <p className="productPageTitle">
                         {product.title}
                     </p>
-                    <Divider horizontal className="productPageDivider"></Divider>
+                    <Divider className="productPageDivider" />
                     <Image src={product.img} className="productPageImage"/>
+                    <Rating rating={product.rating} size={"huge"} />
+                    {product.rating}
+                    <p className="productPageDescription">
+                        {product.description}
+                    </p>
+                    <Divider className="productPageDivider" />
+                    <Button animated='vertical'>
+                        <Button.Content visible>Add To Cart ({product.price})</Button.Content>
+                        <Button.Content hidden>
+                            <Icon name='shopping cart' />
+                        </Button.Content>
+                    </Button>
                 </Container>
             </div>
         )

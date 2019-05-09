@@ -29,7 +29,9 @@
 }
 
 .productImage {
-  max-height: 100%;
+  max-height: 90%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .productContent {
@@ -63,6 +65,26 @@
 .productText {
   width: 100%;
   height: 10%;
-  font-size: .75em;
+  font-size: 1em;
+}
+
+.productRatingBox {
+  width: 75%;
+  left: 0;
+}
+
+.productCartIcon {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+}
+
+@media (max-width: 767px) {
+  .productCartIcon {
+    bottom: 8%;
+    right: 25%;
+  }
 }
 /*# sourceMappingURL=Product.css.map */

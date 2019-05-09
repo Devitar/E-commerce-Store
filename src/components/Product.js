@@ -2,7 +2,8 @@ import React from 'react';
 import './scss/Product.css';
 
 //components
-import { Image } from 'semantic-ui-react';
+import { Image, Icon } from 'semantic-ui-react';
+import Rating from './Rating';
 
 /* example data from api
     "id": 4,
@@ -16,14 +17,21 @@ import { Image } from 'semantic-ui-react';
 
 const Product = (props) => {
     return(
-        <div className="productMain" onClick={props.onClick}>
-            <div className="imageContainerProduct">
-                <Image className="productImage" src={props.productObj.img} rounded centered size='tiny'/>
+        <div>
+            <div className="productMain" onClick={props.handleClick}>
+                <div className="imageContainerProduct" >
+                    <Image className="productImage" src={props.productObj.img} rounded centered size='tiny' />
+                </div>
+                <div className="productContent">
+                    <h1 className="productTitle">{props.productObj.title}</h1>
+                        <p className="productText">${props.productObj.price}</p>
+                    <div className="productRatingBox">
+                            <Rating rating={props.rating} />
+                            {props.rating}
+                        </div>
+                </div>
             </div>
-            <div className="productContent">
-                <h1 className="productTitle">{props.productObj.title}</h1>
-                <p className="productText">{props.productObj.price}</p>
-            </div>
+            <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
         </div>
     )
 }
