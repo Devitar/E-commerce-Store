@@ -5,11 +5,15 @@ import "./scss/PageController.css";
 //components
 import ProductList from './ProductList';
 import { Route, Switch, Redirect, Link } from "react-router-dom";
-import ProductPage from './routes/ProductPage';
-import ErrorPage from './routes/ErrorPage';
 import DropDownMenu from './DropDownMenu';
 import SearchBar from './SearchBar';
 import TopBarInfo from './TopBarInfo';
+
+//pages
+import ProductPage from './routes/ProductPage';
+import ErrorPage from './routes/ErrorPage';
+import Cart from './routes/Cart';
+
 
 class PageController extends Component {
   state = { visible: false }
@@ -68,6 +72,7 @@ class PageController extends Component {
                     <Route path="/" exact component={ProductList} />
                     <Route path="/product/:productId" component={ProductPage} />
                     <Route path="/404" component={ErrorPage} />
+                    <Route path="/cart" component={Cart} />
                     <Redirect to="/" />
                 </Switch>
             </Segment>
