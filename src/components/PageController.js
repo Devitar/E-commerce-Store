@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
-import "./scss/SideBar.css";
+import "./scss/PageController.css";
 
 //components
 import ProductList from './ProductList';
@@ -8,8 +8,10 @@ import { Route, Switch, Redirect, Link } from "react-router-dom";
 import ProductPage from './routes/ProductPage';
 import ErrorPage from './routes/ErrorPage';
 import DropDownMenu from './DropDownMenu';
+import SearchBar from './SearchBar';
+import TopBarInfo from './TopBarInfo';
 
-class SideBar extends Component {
+class PageController extends Component {
   state = { visible: false }
 
   handleHideClick = () => this.setState({ visible: false })
@@ -20,15 +22,21 @@ class SideBar extends Component {
     const { visible } = this.state;
 
     return (
-      <div className="sideBarMain">
+      <div className="barMain">
         <div className="topBarMain">
           <Button.Group>
               <Button disabled={visible} onClick={this.handleShowClick}>
-                  <Icon name="bars" />
+                  <Icon name="bars" size="large"/>
               </Button>
           </Button.Group>
-          <div className="companyTop">
-              Temporary Company Name
+          <div className="topBarSecondary">
+            <div className="companyTop">
+                Company Name
+            </div>
+            <div className="topBarRight">
+              <SearchBar />
+              <TopBarInfo />
+            </div>
           </div>
         </div>
         <Sidebar.Pushable as={Segment}>
@@ -70,4 +78,4 @@ class SideBar extends Component {
   }
 }
 
-export default SideBar
+export default PageController;

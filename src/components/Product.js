@@ -23,7 +23,8 @@ const Product = (props) => {
                     <Image className="productImage" src={props.productObj.img} rounded centered size='tiny' />
                 </div>
                 <div className="productContent">
-                    <h1 className="productTitle">{props.productObj.title}</h1>
+                    <p className="productText">${props.productObj.price}</p>
+                    <p className="productTitle">{props.productObj.title}</p>
                     <div className="productFooter">
                         <div className="productRatingBox">
                                 <Rating rating={props.rating} />
@@ -32,10 +33,7 @@ const Product = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="iconPrice">
-                <p className="productText">${props.productObj.price}</p>
-                <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
-            </div>
+            <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
         </div>
     )
 }

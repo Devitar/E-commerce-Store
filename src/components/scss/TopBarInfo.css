@@ -1,0 +1,23 @@
+.mainTopBarInfo {
+  margin-top: 5px;
+  height: 100%;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.greetingText {
+  font-family: 'Raleway';
+  font-size: 1.4rem;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.cartCount {
+  font-family: 'Raleway' !important;
+}
+/*# sourceMappingURL=TopBarInfo.css.map */

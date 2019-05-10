@@ -1,0 +1,19 @@
+.mainTopBarInfo{
+    margin-top: 5px;
+    height: 100%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.greetingText{
+    font-family: 'Raleway';
+    font-size: 1.4rem;
+    // text-align: center;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.cartCount{
+    font-family: 'Raleway' !important;
+}

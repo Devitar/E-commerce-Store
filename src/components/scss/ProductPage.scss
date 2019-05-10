@@ -1,7 +1,7 @@
 .productPage{
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 100%;
     min-width: 100vw;
 }
 
@@ -23,8 +23,16 @@
 .productPageTitle{
     font-size: 2rem;
     text-align: center;
+    font-family: 'Poppins';
 }
 
 .productPageDescription{
     margin-top: 2%;
+    font-family: 'Raleway';
+}
+
+@media (max-width: 767px){
+    .productPage{
+        min-width: 100%;
+    }
 }

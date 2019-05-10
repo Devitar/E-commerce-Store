@@ -52,7 +52,10 @@ class ProductList extends React.Component{
                                 store.dispatch({type: "SELECT_PRODUCT", data: product.id});
                                 this.setState({redirecting: true, redirectTo: product.id});
                             }}
-                            handleClickCart={() => {store.dispatch({type: "ADD_TO_CART", data: product.id})}}
+                            handleClickCart={() => {
+                                store.dispatch({type: "ADD_TO_CART", data: product.id}) 
+                                console.log(store.getState())
+                            }}
                             rating={product.rating}
                         >
                         </Product>

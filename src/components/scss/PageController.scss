@@ -1,0 +1,36 @@
+.topBarMain{
+    display: flex;
+}
+.topBarSecondary{
+    margin-left: 1.5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.companyTop{
+    font-family: 'Poppins';
+    font-size: 1.85rem;
+}
+
+.topBarRight{
+    display: flex;
+    align-items: center;
+}
+
+
+.sideBarObj{
+    -webkit-box-shadow: 4px 0px 14px -2px rgba(0,0,0,0.58) !important;
+    -moz-box-shadow: 4px 0px 14px -2px rgba(0,0,0,0.58) !important;
+    box-shadow: 4px 0px 14px -2px rgba(0,0,0,0.58) !important;
+}
+
+@media (max-width: 768px){
+    .companyTop{
+        display: none;
+    }
+    .topBarSecondary{
+        justify-content: flex-end;
+    }
+}
