@@ -4,6 +4,7 @@ import './scss/TopBarInfo.css';
 //components
 import store from "./store";
 import { Icon } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
 
 class TopBarInfo extends React.Component{
 
@@ -11,12 +12,14 @@ class TopBarInfo extends React.Component{
         return(
             <div className="mainTopBarInfo">
                 <div className="greetingText">Hi, Devin!</div>
-                <Icon.Group size="large">
-                    <Icon name="shopping cart" circular inverted/>
-                    <Icon className="cartCount" circular inverted color="grey" corner>
-                        {store.getState().cart.length}
-                    </Icon>
-                </Icon.Group>
+                <Link to='./cart'>
+                    <Icon.Group size="large">
+                        <Icon name="shopping cart" circular inverted/>
+                        <Icon className="cartCount" circular inverted color="grey" corner>
+                            {store.getState().cart.length}
+                        </Icon>
+                    </Icon.Group>
+                </Link>
             </div> 
         )
     }
