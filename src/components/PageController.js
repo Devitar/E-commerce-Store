@@ -55,7 +55,7 @@ class PageController extends Component {
             width='thin'
             className="sideBarObj"
           >
-              <Link to="/" >
+              <Link to="/E-commerce-Store" >
                 <Menu.Item>
                   <Icon name='home' />
                   Home
@@ -69,11 +69,11 @@ class PageController extends Component {
           <Sidebar.Pusher>
             <Segment basic>
                 <Switch>
-                    <Route path="/" exact component={ProductList} />
-                    <Route path="/product/:productId" component={ProductPage} />
-                    <Route path="/404" component={ErrorPage} />
-                    <Route path="/cart" component={Cart} />
-                    <Redirect to="/" />
+                    <Route path="/E-commerce-Store" exact component={ProductList} />
+                    <Route path="/E-commerce-Store/product/:productId" component={ProductPage} />
+                    <Route path="/E-commerce-Store/404" component={ErrorPage} />
+                    <Route path="/E-commerce-Store/cart" component={Cart} />
+                    <Redirect to="/E-commerce-Store" />
                 </Switch>
             </Segment>
           </Sidebar.Pusher>

@@ -5,7 +5,7 @@ import "../scss/ErrorPage.css";
 const ErrorPage = () => {
     return(
         <div className="errorPage">
-            <Link to='/'>
+            <Link to='/E-commerce-Store'>
                 <p>
                     Error 404: Product not found. Click here to return home.
                 </p>

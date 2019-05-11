@@ -42,7 +42,7 @@ function cart(state = defaultState.cart, action){
         return newState;
     }else if (action.type === "REMOVE_FROM_CART"){
         const newState = [...state];
-        newState.splice()
+        newState.splice(action.data, 1);
         return newState;
     }else{
         return state;

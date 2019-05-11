@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,cAAc,CAAA;EACV,WAAW,EAAE,SAAS;CACzB",
     "sources": [
         "Modal.scss"
     ],

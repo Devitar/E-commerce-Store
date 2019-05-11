@@ -1,6 +1,9 @@
 import React from 'react';
+
+//components
 import { Dropdown } from 'semantic-ui-react';
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import store from './store';
 
 const categoryOptions = [
   {
@@ -10,13 +13,17 @@ const categoryOptions = [
   },
 ]
 
-const DropDownMenu = () => (
-  <Dropdown
-    placeholder='Select Category'
-    fluid
-    selection
-    options={categoryOptions}
-  />
-)
+
+
+const DropDownMenu = () => {
+  return(
+    <Dropdown
+      placeholder='Select Category'
+      fluid
+      selection
+      options={categoryOptions}
+    />
+  )
+}
 
 export default DropDownMenu;

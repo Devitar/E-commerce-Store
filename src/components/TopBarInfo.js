@@ -12,7 +12,7 @@ class TopBarInfo extends React.Component{
         return(
             <div className="mainTopBarInfo">
                 <div className="greetingText">Hi, Devin!</div>
-                <Link to='./cart'>
+                <Link to='/E-commerce-Store/cart'>
                     <Icon.Group size="large">
                         <Icon name="shopping cart" circular inverted/>
                         <Icon className="cartCount" circular inverted color="grey" corner>
