@@ -18,6 +18,7 @@ import Footer from '../Footer';
     "rating": 4.8,
     "category": "headphones"
 */
+  
 
 const defaultState = {
     showModal: false,

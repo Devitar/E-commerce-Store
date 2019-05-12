@@ -1,3 +1,10 @@
+.productWrapper {
+  margin: 0;
+  padding: 0;
+  height: 33vh;
+  max-width: 75vw;
+}
+
 .productMain {
   color: black;
   display: -webkit-box;
@@ -8,8 +15,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  height: 33vh;
-  max-width: 75vw;
+  height: 100%;
+  max-width: 100%;
   border-radius: 15px;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -17,7 +24,7 @@
 
 .imageContainerProduct {
   width: 100%;
-  min-height: 65%;
+  min-height: 55%;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,7 +42,7 @@
 
 .productContent {
   width: 100%;
-  min-height: 35%;
+  min-height: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,9 +74,9 @@
 
 .productFooter {
   width: 75%;
-  height: 15%;
+  min-height: 15%;
   left: 0;
-  bottom: 5%;
+  bottom: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,24 +87,20 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  right: 15%;
+  bottom: 6%;
 }
 
 .productRatingBox {
+  position: relative;
+  left: 15%;
+  bottom: 60px;
   width: 100%;
 }
 
 .productCartIcon {
-  width: 10%;
-  height: 15%;
-  position: absolute;
-  right: 8%;
-  bottom: 8%;
-}
-
-@media (max-width: 767px) {
-  .productCartIcon {
-    bottom: 8%;
-    right: 24%;
-  }
+  left: 82.5%;
+  position: relative;
+  bottom: 40px;
 }
 /*# sourceMappingURL=Product.css.map */

@@ -13,7 +13,6 @@ import TopBarInfo from './TopBarInfo';
 import ProductPage from './routes/ProductPage';
 import ErrorPage from './routes/ErrorPage';
 import Cart from './routes/Cart';
-import Category from './routes/Category';
 
 const categoryConversion = {
   "headphones": "Headphones",
@@ -103,7 +102,7 @@ class PageController extends Component {
                     <Route path="/E-commerce-Store/product/:productId" component={ProductPage} />
                     <Route path="/E-commerce-Store/404" component={ErrorPage} />
                     <Route path="/E-commerce-Store/cart" component={Cart} />
-                    <Route path="/E-commerce-Store/category/:categoryName" component={Category} />
+                    <Route path="/E-commerce-Store/category/:categoryName" component={ProductList} />
                     <Redirect to="/E-commerce-Store" />
                 </Switch>
             </Segment>

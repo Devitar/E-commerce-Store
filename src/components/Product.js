@@ -17,7 +17,7 @@ import Rating from './Rating';
 
 const Product = (props) => {
     return(
-        <div>
+        <div className="productWrapper">
             <div className="productMain" onClick={props.handleClick}>
                 <div className="imageContainerProduct" >
                     <Image className="productImage" src={props.productObj.img} rounded centered size='tiny' />
@@ -25,15 +25,15 @@ const Product = (props) => {
                 <div className="productContent">
                     <p className="productText">${props.productObj.price}</p>
                     <p className="productTitle">{props.productObj.title}</p>
-                    <div className="productFooter">
-                        <div className="productRatingBox">
-                                <Rating rating={props.rating} />
-                                {props.rating}
-                        </div>
+                </div>
+                <div className="productFooter">
+                    <div className="productRatingBox">
+                        <Rating rating={props.rating} />
+                        {props.rating}
                     </div>
-                <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
                 </div>
             </div>
+            <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
         </div>
     )
 }
