@@ -69,6 +69,12 @@ class Cart extends React.Component{
                         {this.renderCartItems()}
                     </Container>
                     <Divider className="productPageDivider" />
+                    <Button animated='vertical'>
+                        <Button.Content visible>Check Out</Button.Content>
+                        <Button.Content hidden>
+                            <Icon name='dollar sign' />
+                        </Button.Content>
+                    </Button>
                 </Container>
                 <Footer />
             </div>
