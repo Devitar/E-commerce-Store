@@ -7,6 +7,7 @@ import { Container, Image, Divider, Button, Icon } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import Rating from '../Rating';
 import Modal from '../Modal';
+import Footer from '../Footer';
 
 /* example data from api
     "id": 4,
@@ -74,6 +75,7 @@ class ProductPage extends React.Component{
                     </Container>
                 </div>
                 <Modal open={this.state.showModal} onNoPress={() => this.hideCartModal()}/>
+                <Footer />
             </div>
         )
     }

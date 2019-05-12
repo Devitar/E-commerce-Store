@@ -1,0 +1,13 @@
+.footerMain {
+  font-family: "Poppins";
+  text-align: center;
+  margin-top: 5%;
+  bottom: 0;
+  width: 100vw;
+  height: 5vh;
+}
+
+.footerLinks {
+  font-family: "Raleway";
+}
+/*# sourceMappingURL=Footer.css.map */

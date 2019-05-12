@@ -3,8 +3,9 @@ import '../scss/Cart.css';
 
 //components
 import store from '../store';
-import { Container, Image, Divider, Button, Icon } from 'semantic-ui-react';
+import { Container, Divider, Button, Icon } from 'semantic-ui-react';
 import PageTitle from '../PageTitle';
+import Footer from '../Footer';
 
 /* example data from api
     "id": 4,
@@ -43,7 +44,7 @@ class Cart extends React.Component{
                 <div className="cartProduct" key={i}>
                     <div className="cartContent">
                         <div className="imageContainerCart">
-                            <img src={productInfo.img} className="cartItemImg" />
+                            <img src={productInfo.img} className="cartItemImg" alt="" />
                         </div>
                         <span className="cartItemTitle">{productInfo.title}</span>
                     </div>
@@ -69,6 +70,7 @@ class Cart extends React.Component{
                     </Container>
                     <Divider className="productPageDivider" />
                 </Container>
+                <Footer />
             </div>
         )
     }

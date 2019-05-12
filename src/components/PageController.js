@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Button, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
+import { Button, Icon, Menu, Segment, Sidebar, Divider } from 'semantic-ui-react';
 import "./scss/PageController.css";
 
 //components
 import ProductList from './ProductList';
 import { Route, Switch, Redirect, Link } from "react-router-dom";
-import DropDownMenu from './DropDownMenu';
+//import DropDownMenu from './DropDownMenu';
 import SearchBar from './SearchBar';
 import TopBarInfo from './TopBarInfo';
 
@@ -13,6 +13,28 @@ import TopBarInfo from './TopBarInfo';
 import ProductPage from './routes/ProductPage';
 import ErrorPage from './routes/ErrorPage';
 import Cart from './routes/Cart';
+import Category from './routes/Category';
+
+const categoryConversion = {
+  "headphones": "Headphones",
+  "tv": "Televisions",
+  "phone": "Phones",
+  "action-camera": "Cameras",
+  "watch": "Watches",
+  "refrigerator": "Refrigerators"
+}
+
+const categoryOptions = [];
+
+Object.keys(categoryConversion).forEach((v,i) => {
+  const newName = categoryConversion[v];
+  categoryOptions.push(
+    {
+      text: newName,
+      original: v
+    }
+  )
+})
 
 
 class PageController extends Component {
@@ -25,6 +47,15 @@ class PageController extends Component {
   render() {
     const { visible } = this.state;
 
+    const allCategoryComponents = categoryOptions.map((category, key) => {
+      return(
+        <Link to={`/E-commerce-Store/category/${category.original}`} key={key} >
+          <Menu.Item>
+            {category.text}
+          </Menu.Item>
+        </Link>
+      )
+    })
     return (
       <div className="barMain">
         <div className="topBarMain">
@@ -61,9 +92,8 @@ class PageController extends Component {
                   Home
                 </Menu.Item>
               </Link>
-            <Menu.Item>
-                <DropDownMenu />
-            </Menu.Item>
+              <Divider />
+              {allCategoryComponents}
           </Sidebar>
 
           <Sidebar.Pusher>
@@ -73,6 +103,7 @@ class PageController extends Component {
                     <Route path="/E-commerce-Store/product/:productId" component={ProductPage} />
                     <Route path="/E-commerce-Store/404" component={ErrorPage} />
                     <Route path="/E-commerce-Store/cart" component={Cart} />
+                    <Route path="/E-commerce-Store/category/:categoryName" component={Category} />
                     <Redirect to="/E-commerce-Store" />
                 </Switch>
             </Segment>

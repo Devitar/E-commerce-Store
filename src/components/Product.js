@@ -31,9 +31,9 @@ const Product = (props) => {
                                 {props.rating}
                         </div>
                     </div>
+                <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
                 </div>
             </div>
-            <Icon name="shopping cart" size="big" onClick={props.handleClickCart} className="productCartIcon"/>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import { Grid, Divider } from 'semantic-ui-react';
 import Product from './Product';
 import Modal from './Modal';
 import PageTitle from './PageTitle';
+import Footer from './Footer';
 
 const defaultState = {
     redirecting: false,
@@ -60,6 +61,7 @@ class ProductList extends React.Component{
                         }
                         <Modal open={this.state.showModal} onNoPress={() => this.hideCartModal()}/>
                     </Grid>
+                    <Footer />
                 </div>
             )
         }else{
