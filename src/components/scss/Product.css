@@ -35,7 +35,7 @@
 }
 
 .productImage {
-  max-height: 90%;
+  max-height: 75%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
@@ -99,7 +99,7 @@
 }
 
 .productCartIcon {
-  left: 82.5%;
+  left: 80%;
   position: relative;
   bottom: 40px;
 }
